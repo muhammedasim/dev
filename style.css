@@ -47,8 +47,42 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  margin-top: 40px;
+  margin-top: 30px;
   max-width: 1220px;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0%;
+  z-index: -1;
+}
+
+/*Add custom cursor so it auto inherits font styles*/
+.cursor::after {
+	content: '_';
+	display: inline;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+/*Custom cursor animation*/
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 
 .logo, .logo__img {
@@ -151,7 +185,7 @@ body {
 .p-card-item {
   background-color: antiquewhite;
   border-radius: 8px;
-  box-shadow: 5px 6px 10px rgb(65 119 47 / 8%);
+  box-shadow: 5px 6px 10px rgb(65 119 47 / 4%);
   display: flex;
   flex-direction: column;
   max-width: 250px;
@@ -211,7 +245,9 @@ body {
   opacity: 0;
 }
 
-.portfolio-card:hover .p-card-overlay {
+.portfolio-card:hover .p-card-overlay,
+.portfolio-card .p-card-overlay:active,
+.portfolio-card:focus .p-card-overlay {
   opacity: 1;
 }
 
@@ -225,7 +261,8 @@ body {
   transition: all 0.25s;
 }
 
-.p-card-site-link:hover, .p-card-sitecode-link:hover {
+.p-card-site-link:hover, .p-card-sitecode-link:hover,
+.p-card-site-link:active, .p-card-sitecode-link:active {
   background-color: var(--bg-color-white);
 }
 
@@ -245,7 +282,8 @@ body {
   top: 50%;
 }
 
-.p-card-site-link:hover .p-card-site-link__icon, .p-card-sitecode-link:hover .p-card-sitecode-link__icon {
+.p-card-site-link:hover .p-card-site-link__icon, .p-card-sitecode-link:hover .p-card-sitecode-link__icon,
+.p-card-site-link:active .p-card-site-link__icon, .p-card-sitecode-link:active .p-card-sitecode-link__icon {
   color: var(--bg-color-black);
 }
 
@@ -422,7 +460,7 @@ body {
 .contact-wrapper__cta-btn {
   background-color: var(--bg-color-black);
   border-radius: 20px;
-  box-shadow: 1px 6px 12px 1px rgb(0 0 0 / 10%);
+  box-shadow: 1px 6px 12px rgb(0 0 0 / 5%);
   color: var(--primary-text-color);
   font-size: 17px;
   padding: 7px 24px 8px;
@@ -432,7 +470,8 @@ body {
   transition: all 0.4s;
 }
 
-.contact-wrapper__cta-btn:hover {
+.contact-wrapper__cta-btn:hover,
+.contact-wrapper__cta-btn:active {
   background-color: var(--primary-text-color);
   color: var(--bg-color-black);
 }
