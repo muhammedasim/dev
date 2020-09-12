@@ -1,3 +1,3 @@
 # My New Portfolio Website
 
-You can check out the hosted file [muhammedasim.github.io/muhammedasim](https://muhammedasim.github.io/muhammedasim).
+You can check out the live site on [muhammedasim.github.io/dev](https://muhammedasim.github.io/dev).

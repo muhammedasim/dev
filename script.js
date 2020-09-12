@@ -1,7 +1,6 @@
 particlesJS.load('particles-js', 'particlesjs-config.json', function() {
-  console.log('callback - particles.js config loaded');
+  console.log('U r always Welcome :)');
 });
-console.log('U r always Welcome :)');
 
 var cardOverlay = document.querySelectorAll('.p-card-item');
 var touchBtn = document.querySelector('.contact-wrapper__cta-btn');
